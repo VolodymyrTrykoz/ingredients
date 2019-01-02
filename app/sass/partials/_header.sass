@@ -1,0 +1,48 @@
+.header
+  display: flex
+  justify-content: space-between
+  img
+    height: 25px
+    padding: 0 5px
+  &__link
+    display: flex
+    align-items: center
+    font-family: $rubik
+    font-weight: 500
+    font-size: 18px
+    text-decoration: none
+    text-transform: uppercase
+    padding: 15px 80px
+    img
+      margin-left: 5px
+  &__text
+    font-weight: 500
+    color: #2d1b45
+
+  &__burger
+    display: block
+    background: transparent
+    position: relative
+    height: 17px
+    width: 40px
+    cursor: pointer
+    &:before,
+    &:after
+      background: #2d1b45
+      backface-visibility: hidden
+      content: ""
+      height: 2px
+      left: 0
+      transition: 0.75s
+      width: 25px
+
+    &:before
+      box-shadow: #2d1b45 0 7px 0 0
+      position: absolute
+      top: 0
+
+    &:after
+      position: absolute
+      top: calc(100% - 3px)
+
+

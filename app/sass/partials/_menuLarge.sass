@@ -1,0 +1,56 @@
+.menu__large
+  display: none
+  position: fixed
+  z-index: 100
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  background: rgba(0,0,0,.2)
+  &.active
+    display: block
+
+
+.wrapper
+  position: fixed
+  z-index: 101
+  width: 20%
+  height: 100%
+  top: 0
+  left: -30%
+  background: #2e1a45
+  &__nav
+    display: flex
+    flex-direction: column
+    text-align: center
+    padding-top: 35%
+  &__svg
+    display: none
+    align-items: center
+    justify-content: center
+    svg
+      width: 100px
+    &Text
+      color: #fff
+      opacity: 0
+      transition: opacity .2s ease-in-out
+      &.active
+        opacity: 1
+
+  .nav__item
+    font-size: 20px
+    color: #fff
+    text-decoration: none
+    margin-bottom: 30px
+    position: relative
+    display: inline-block
+    transform: translateX(-30%)
+    opacity: 0
+    transition: .2s letter-spacing ease-in-out, .3s text-shadow ease-in-out
+
+    &:hover
+      letter-spacing: 1px
+      text-shadow: 5px 7px 10px rgba(193,136,195,1)
+
+
+

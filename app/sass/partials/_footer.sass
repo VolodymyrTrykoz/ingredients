@@ -1,0 +1,37 @@
+.footer
+  background: #2e1a45
+  color: #fff
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 20px 150px
+  &__social
+      display: flex
+      align-items: center
+      span
+        font-size: 14px
+      img
+        height: 25px
+        margin-left: 10px
+  .nav__item
+    display: inline-block
+    color: #fff
+    font-size: 15px
+    text-decoration: none
+    margin-right: 45px
+    position: relative
+
+    &:after
+      content: ''
+      position: absolute
+      width: 0
+      height: 2px
+      background-image: linear-gradient(to right, #7F398C , #923aff)
+      right: 0
+      bottom: -5px
+      transition: width .2s ease-in-out
+    &:hover
+      &:after
+        width: 100%
+        left: 0

@@ -1,0 +1,50 @@
+$golden: 'GoldenYouth'
+$rubik: 'Rubik', sans-serif
+$myriad: 'MyriadPro'
+
+$purple: #4d008c
+$purpleDark: #54326a
+$darkGray: #424242
+$pink: #fd54cf
+
+// placeholders
+
+
+%transition
+  transition: 0.2s linear
+
+
+// extends
+%vam
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+
+%ham
+  position: absolute
+  left: 50%
+  transform: translateX(-50%)
+
+%yTransform
+  position: relative
+  transform: translateX(100%)
+
+%xTransform
+  position: relative
+  transform: translateX(150%)
+
+%opacity
+  opacity: 0
+
+%relative
+  position: relative
+
+%bsh
+  box-shadow: 3px 5px 7px 3px rgba(77,0,140,.2)
+
+
+
+
+@function get-vw($object)
+  $vw: (1920 * 0.01) * 1px
+  @return ($object / $vw) * 1vw

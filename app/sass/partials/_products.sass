@@ -1,0 +1,68 @@
+.products
+  &__nav
+    display: flex
+    justify-content: center
+    &.sticky
+      position: fixed
+      left: 0
+      top: 0
+      right: 0
+      z-index: 5
+      background: white
+      box-shadow: 0 0 2px 0 rgba(77,0,140,.5)
+  &__link
+    display: inline-block
+    position: relative
+    padding: 15px 50px
+    font-family: $rubik
+    font-size: 16px
+    font-weight: 300
+    text-align: center
+    text-decoration: none
+    color: $darkGray
+    overflow: hidden
+    transition: color .2s ease-in-out, background .2s ease-in-out
+    &:not(:last-child):after
+      content: ''
+      position: absolute
+      height: 100%
+      width: 1px
+      @extend %vam
+      right: 0
+      background-image: linear-gradient(to top, transparent, #ccc, transparent)
+    &.active
+      color: #fff
+      background: $purpleDark
+    span
+      position: relative
+      pointer-events: none
+    &::before
+      --size: 0
+      content: ''
+      position: absolute
+      left: var(--x)
+      top: var(--y)
+      width: var(--size)
+      height: var(--size)
+      background: radial-gradient(circle closest-side, rgba(77,0,140,.3), transparent)
+      transform: translate(-50%, -50%)
+      transition: width .2s ease-in-out, height .2s ease-in-out, color .2s ease-in-out
+    &:hover:not(.active)
+      color: #7F398C
+      &::before
+        --size: 600px
+  &__info
+    text-align: center
+    padding-top: 30px
+  &__heading
+    font-size: 20px
+    font-family: $rubik
+    font-weight: 400
+    text-transform: uppercase
+    text-align: center
+    span
+      font-weight: 700
+  &__descr
+    width: 55%
+    margin: 0 auto
+    font-size: 15px

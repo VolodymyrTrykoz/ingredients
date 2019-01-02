@@ -1,0 +1,28 @@
+@media only screen and (max-width: 768px)
+  .ingredients
+    .title
+      font-size: 25px
+
+@media only screen and (max-width: 450px)
+  .ingredients
+    text-align: center
+    &__item
+      display: block
+      &:nth-child(even)
+        .ingredients__info
+          margin-left: 0
+      &:nth-child(odd)
+        .ingredients__imgBox
+          transform: translate(15px,-15px)
+      &:nth-child(even)
+        .ingredients__imgBox
+          transform: translate(15px,-15px)
+    &__img
+      width: 90%
+      margin-left: 10px
+      &Box
+        min-height: 200px
+    &__info
+      width: 100%
+      &Wrapper
+        margin: 0 auto

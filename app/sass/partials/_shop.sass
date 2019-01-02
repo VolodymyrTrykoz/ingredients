@@ -1,0 +1,75 @@
+.shop
+  &__wrapper
+    max-width: 900px
+    margin: 0 auto 120px
+    padding-top: 100px
+    display: flex
+    justify-content: space-between
+  &__item
+    width: 30%
+    text-align: center
+    position: relative
+    height: 360px
+    .shop__img
+      background-position: center center
+      background-size: 100%
+      transition: background-size .5s ease-in-out
+      &:hover
+        background-size: 120%
+    &:nth-child(1)
+      .shop__img
+        background-image: url("../img/prod1.jpg")
+
+    &:nth-child(2)
+      .shop__img
+        background-image: url("../img/prod2.jpg")
+
+    &:nth-child(3)
+      .shop__img
+        background-image: url("../img/prod3.jpg")
+  &__img
+    overflow: hidden
+    width: 270px
+    height: 216px
+
+
+  .heading
+    font-size: 20px
+    margin: 10px 0 0 0
+  p
+    margin: 0
+  &__link
+    display: block
+    width: 80%
+    padding: 7px 0
+    margin: 15px auto 0
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    text-decoration: none
+    font-weight: 500
+    color: #c5508a
+    border: 2px solid #c5508a
+    border-radius: 2px
+    overflow: hidden
+
+    span
+      position: relative
+      pointer-events: none
+    &::before
+      --size: 0
+      content: ''
+      position: absolute
+      left: var(--x)
+      top: var(--y)
+      width: var(--size)
+      height: var(--size)
+      background: radial-gradient(circle closest-side, rgba(130, 114, 216,1), transparent)
+      transform: translate(-50%, -50%)
+      transition: width .2s ease-in-out, height .2s ease-in-out, color .2s ease-in-out
+    &:hover
+      color: #fff
+      border: 2px solid rgba(130, 114, 216,1)
+      &::before
+        --size: 400px

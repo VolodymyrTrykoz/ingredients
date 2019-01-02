@@ -1,0 +1,93 @@
+@media only screen and (max-width: 768px)
+  .subscription
+    &__box
+      height: auto
+      flex-direction: column
+    &__img
+      width: 100%
+      text-align: center
+    &__step
+      width: 100%
+      justify-content: center
+      &:nth-child(even)
+        padding-top: 25px
+    &__item
+      &:nth-child(2)
+        .subscription__img
+          img
+            width: 70vw
+            transform: translate(0, 25px)
+      &:nth-child(3)
+        .subscription__img
+          img
+            position: relative
+            bottom: -4px
+
+
+      &:nth-child(even)
+        .subscription__img
+          order: 2
+      &:nth-child(odd)
+        .subscription__img
+          order: 1
+        .subscription__step
+          padding-top: 30px
+      &:last-child
+        padding-bottom: 20px
+  .option, .choose
+    justify-content: center
+  .option__logo
+    width: 90px
+    height: 90px
+    img
+      height: 35px
+
+
+@media only screen and (max-width: 450px)
+  .subscription
+    .title
+      font-size: 25px
+      width: 80%
+      margin: 0 auto
+    &__item
+      &:nth-child(2)
+        .subscription__img
+          img
+            width: 95vw
+            transform: translate(0, 18px)
+    &__step
+      padding:
+        left: 20px
+        right: 20px
+    .option
+      padding-top: 15px
+      .title
+        font-size: 14px
+        margin: 5px 10px 15px
+
+
+
+  .choose
+    &__descr
+      text-align: left
+      margin-left: 30px
+    &__img
+      transform: none
+
+@media only screen and (max-width: 320px)
+  .subscription
+    .option
+      .title
+        font-size: 12px
+      &__logo
+        width: 80px
+        height: 80px
+        img
+          height: 30px
+  .choose
+    &__descr
+      margin-left: 15px
+      font-size: 12px
+    &__img
+      width: 50px
+      height: 50px
